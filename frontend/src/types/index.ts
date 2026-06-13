@@ -5,6 +5,8 @@ export interface MorseSymbol {
 
 export type TrainMode = 'charToCode' | 'codeToChar' | 'audioToChar' | 'typingToCode'
 
+export type Timbre = 'sine' | 'square' | 'sawtooth' | 'triangle'
+
 export interface HistoryEntry {
   id: number
   input: string

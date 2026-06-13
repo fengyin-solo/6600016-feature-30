@@ -55,7 +55,7 @@
     </div>
 
     <!-- Settings -->
-    <div class="bg-gray-900 rounded-xl p-4 grid grid-cols-3 gap-4">
+    <div class="bg-gray-900 rounded-xl p-4 grid grid-cols-2 md:grid-cols-4 gap-4">
       <div>
         <label class="text-gray-400 text-sm">速度 (WPM): {{ store.wpm }}</label>
         <input type="range" v-model.number="store.wpm" min="5" max="40" class="w-full" />
@@ -67,6 +67,15 @@
       <div>
         <label class="text-gray-400 text-sm">音量: {{ store.volume.toFixed(1) }}</label>
         <input type="range" v-model.number="store.volume" min="0" max="1" step="0.1" class="w-full" />
+      </div>
+      <div>
+        <label class="text-gray-400 text-sm">音色</label>
+        <select v-model="store.timbre" class="w-full bg-gray-800 rounded px-3 py-2 text-white mt-1">
+          <option value="sine">正弦波</option>
+          <option value="square">方波</option>
+          <option value="sawtooth">锯齿波</option>
+          <option value="triangle">三角波</option>
+        </select>
       </div>
     </div>
   </div>
